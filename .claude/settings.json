@@ -1,0 +1,6 @@
+{
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "ask": ["Bash(git push *)", "Bash(git commit *)", "Bash(rm -rf *)"]
+  }
+}
