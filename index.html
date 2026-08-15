@@ -1,59 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Todo</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="app">
-    <header class="app-header">
-      <h1 class="app-title">My Todo</h1>
-      <div class="progress" id="progress">
-        <div class="progress-bar">
-          <div class="progress-bar-fill" id="progress-bar-fill" style="width: 0%;"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app-header">
+        <h1 class="app-title">My Todo</h1>
+        <div class="progress" id="progress">
+          <div class="progress-bar">
+            <div
+              class="progress-bar-fill"
+              id="progress-bar-fill"
+              style="width: 0%"
+            ></div>
+          </div>
+          <span class="progress-text" id="progress-text">0/0 완료</span>
         </div>
-        <span class="progress-text" id="progress-text">0/0 완료</span>
-      </div>
-    </header>
+      </header>
 
-    <p id="storage-warning" class="storage-warning" hidden>
-      데이터가 저장되지 않을 수 있습니다
-    </p>
+      <p id="storage-warning" class="storage-warning" hidden>
+        데이터가 저장되지 않을 수 있습니다
+      </p>
 
-    <section class="todo-form" aria-label="할 일 추가">
-      <input
-        type="text"
-        id="todo-input"
-        class="todo-input"
-        placeholder="할 일을 입력하세요"
-      />
-      <select id="category-select" class="category-select">
-        <option value="업무">업무</option>
-        <option value="개인" selected>개인</option>
-        <option value="공부">공부</option>
-      </select>
-      <button type="button" id="add-btn" class="add-btn">추가</button>
-    </section>
-    <p id="auto-category-hint" class="auto-category-hint" hidden>
-      키워드를 분석해 카테고리를 자동으로 선택했습니다
-    </p>
-    <p id="input-error" class="input-error" hidden>할 일을 입력해주세요</p>
+      <section class="todo-form" aria-label="할 일 추가">
+        <input
+          type="text"
+          id="todo-input"
+          class="todo-input"
+          placeholder="할 일을 입력하세요"
+        />
+        <select id="category-select" class="category-select">
+          <option value="업무">업무</option>
+          <option value="개인" selected>개인</option>
+          <option value="공부">공부</option>
+        </select>
+        <button type="button" id="add-btn" class="add-btn">추가</button>
+      </section>
+      <p id="auto-category-hint" class="auto-category-hint" hidden>
+        키워드를 분석해 카테고리를 자동으로 선택했습니다
+      </p>
+      <p id="input-error" class="input-error" hidden>할 일을 입력해주세요</p>
 
-    <nav class="filter-tabs" aria-label="카테고리 필터">
-      <button type="button" class="filter-tab active" data-category="전체">전체</button>
-      <button type="button" class="filter-tab" data-category="업무">업무</button>
-      <button type="button" class="filter-tab" data-category="개인">개인</button>
-      <button type="button" class="filter-tab" data-category="공부">공부</button>
-    </nav>
+      <nav class="filter-tabs" aria-label="카테고리 필터">
+        <button type="button" class="filter-tab active" data-category="전체">
+          전체
+        </button>
+        <button type="button" class="filter-tab" data-category="업무">
+          업무
+        </button>
+        <button type="button" class="filter-tab" data-category="개인">
+          개인
+        </button>
+        <button type="button" class="filter-tab" data-category="공부">
+          공부
+        </button>
+      </nav>
 
-    <main class="todo-list-wrapper">
-      <ul id="todo-list" class="todo-list"></ul>
-      <p id="empty-state" class="empty-state">할 일이 없습니다</p>
-    </main>
-  </div>
+      <main class="todo-list-wrapper">
+        <ul id="todo-list" class="todo-list"></ul>
+        <p id="empty-state" class="empty-state">할 일이 없습니다</p>
+      </main>
+    </div>
 
-  <script src="app.js"></script>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
